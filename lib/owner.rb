@@ -67,7 +67,7 @@ class Owner
         indv_pet.mood = "nervous"
       end
     end
-    @pets = {:fishes => [], :dogs => [], :cats=> []}
+    pets.clear
   end
   
 end
