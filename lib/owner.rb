@@ -15,6 +15,11 @@ class Owner
     @@all.count
   end
   
+  def self.sell_pets
+    
+    @pets = {:fishes => [], :dogs => [], :cats=> []}
+  end
+  
   def initialize(name, species= "human")
     @name = name 
     @@all << self
@@ -55,7 +60,7 @@ class Owner
   end
   
   def feed_fish
-    pets[:fish].each do |fish|
+    pets[:fishes].each do |fish|
       fish.mood = "happy"
     end
   end
