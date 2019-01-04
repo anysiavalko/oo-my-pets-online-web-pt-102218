@@ -15,14 +15,6 @@ class Owner
     @@all.count
   end
   
-  def self.sell_pets
-    pets.each do |keys, values|
-      values.each do |value|
-       value.mood = "nervous"
-      end
-    end
-    @pets = {:fishes => [], :dogs => [], :cats=> []}
-  end
   
   def initialize(name, species= "human")
     @name = name 
@@ -69,5 +61,13 @@ class Owner
     end
   end
   
+   def sell_pets
+    pets.each do |keys, values|
+      values.each do |value|
+       value.mood = "nervous"
+      end
+    end
+    @pets = {:fishes => [], :dogs => [], :cats=> []}
+  end
   
 end
