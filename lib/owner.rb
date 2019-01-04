@@ -22,6 +22,14 @@ class Owner
     @pets = {:fishes => [], :dogs => [], :cats=> []}
   end
   
+  def species 
+    @species 
+  end 
+  
+  def say_species 
+    "I am a #{species}."
+  end 
+  
   def buy_fish(name)
     pets[:fishes] << Fish.new(name)
   end 
@@ -34,15 +42,9 @@ class Owner
     pets[:dogs] << Dog.new(name)
   end
   
+  def walk_dogs
+    
   
-  
-  def species 
-    @species 
-  end 
-  
-  def say_species 
-    "I am a #{species}."
-  end 
   
   
 end
