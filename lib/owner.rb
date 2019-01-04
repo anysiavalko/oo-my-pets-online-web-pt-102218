@@ -17,7 +17,8 @@ class Owner
   
   def self.sell_pets
     pets.each do |keys, values|
-      value.mood = "nervous"
+      values.each do |value|
+       value.mood = "nervous"
     end
     @pets = {:fishes => [], :dogs => [], :cats=> []}
   end
